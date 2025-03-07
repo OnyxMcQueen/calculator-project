@@ -4,10 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <!-- Row 1-->
+       <button class="btn" id="btn-1">1</button>
+       <button class="btn" id="btn-2">2</button>
+       <button class="btn" id="btn-3">3</button>
+       <button class="btn operator" id="btn-add">+</button>
+
+       <!-- Row 2-->
+        <button class="btn" id="btn-4">4</button>
+        <button class="btn" id="btn-5">5</button>
+        <button class="btn" id="btn-6">6</button>
+        <button class="btn operator" id="btn-subtract">-</button>
+
+        <!-- Row 3-->
+         <button class="btn" id="btn-7">7</button>
+         <button class="btn" id="btn-8">8</button>
+         <button class="btn" id="btn-9">9</button>
+         <button class="btn operator" id="btn-multiply">x</button>
+
+         <!-- Row 4-->
+          <button class="btn" id="btn-clear">C</button>
+          <button class="btn" id="btn-0">0</button>
+          <button class="btn" id="btn-equal">=</button>
+          <button class="btn operator" id="btn-divide">÷</button>
+    </div>
+  </div>
 </body>
 </html>
