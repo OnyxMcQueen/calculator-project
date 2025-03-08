@@ -1,3 +1,8 @@
+// Three variables to store the calculator operation (firstNumber, operation, secondNumber)
+let firstNumber = '';
+let operator = '';
+let secondNumber = '';
+
 // Create Math Operation Functions (add, subtract, multiply, divide)
 
 function add(num1, num2){
