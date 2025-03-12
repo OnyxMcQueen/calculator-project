@@ -3,13 +3,21 @@
   padding: 0;
 }
 
+#calc-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 50px auto;
+}
+
 .calculator {
   background-color: rgb(226, 223, 223);
   border: 2px solid black;
   border-radius: 10px;
   height: 425px;
   width: 310px;
-  margin: 50px auto;
 }
 
 #display {
@@ -47,4 +55,15 @@
 
 .operator {
   background-color: rgb(171, 216, 244);
+}
+
+.highlight {
+  color: white;
+  background-color: rgb(74, 128, 162);
+}
+
+#message {
+  font-family: 'Orbitron', sans-serif;
+  font-size: medium;
+  color: red;
 }
