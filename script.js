@@ -87,5 +87,18 @@ calculator.addEventListener('click', (e) => {
       e.target.classList.add('highlight');
       previousOperator = e.target;
     }
+
+    if(e.target.classList.contains('clear')){
+      firstNumber = '';
+      operator = '';
+      secondNumber = '';
+
+      if(previousOperator){
+        previousOperator.classList.remove('highlight');
+        previousOperator = null;
+      }
+
+      calculatorDisplay.textContent = '0';
+    }
   }
 })
