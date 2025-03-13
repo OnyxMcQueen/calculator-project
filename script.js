@@ -24,7 +24,7 @@ function multiply(num1, num2){
 
 function divide(num1, num2){
   if(num2 === 0){
-    return 'I am broken XD';
+    return 'Error';
   }
   return num1 / num2;
 }
@@ -122,17 +122,19 @@ calculator.addEventListener('click', (e) => {
       }
 
       calculatorDisplay.textContent = '0';
+      message.textContent = '';
       shouldBeEnabled();
     }
 
     if(e.target.classList.contains('equal')){
       let operationResult = operate(operator, convertToNumber(firstNumber), convertToNumber(secondNumber));
-      
+
       if(typeof operationResult !== 'string'){
         operationResult = Math.round(operationResult * 100) / 100;
         calculatorDisplay.textContent = operationResult;
       } else {
         calculatorDisplay.textContent = operationResult;
+        message.textContent = 'Congratulations! You’ve just unlocked the secrets of the universe… oh wait, never mind. You just tried to divide by zero. Nice try, Einstein!'
       }
 
       firstNumber = '';
