@@ -132,12 +132,17 @@ calculator.addEventListener('click', (e) => {
       if(typeof operationResult !== 'string'){
         operationResult = Math.round(operationResult * 100) / 100;
         calculatorDisplay.textContent = operationResult;
+
+        // Store the result for next operation
+        firstNumber = operationResult.toString();
       } else {
         calculatorDisplay.textContent = operationResult;
         message.textContent = 'Congratulations! You’ve just unlocked the secrets of the universe… oh wait, never mind. You just tried to divide by zero. Nice try, Einstein!'
+
+        // Reset everything if an error
+        firstNumber = '';
       }
 
-      firstNumber = '';
       operator = '';
       secondNumber = '';
 
