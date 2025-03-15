@@ -1,8 +1,9 @@
 const calculator = document.querySelector('.calculator');
 const calculatorDisplay = document.querySelector('#display');
 const message = document.querySelector('#message');
-let previousOperator = null;
 const equalButton = document.querySelector('#btn-equal');
+let previousOperator = null;
+let operationCompleted = false;
 
 // Three variables to store each part of the calculator operation (firstNumber, operation, secondNumber)
 let firstNumber = '';
@@ -124,6 +125,7 @@ calculator.addEventListener('click', (e) => {
       calculatorDisplay.textContent = '0';
       message.textContent = '';
       shouldBeEnabled();
+      operationCompleted = false;
     }
 
     if(e.target.classList.contains('equal')){
@@ -152,6 +154,21 @@ calculator.addEventListener('click', (e) => {
       }
 
       shouldBeEnabled();
+      operationCompleted = true;
+    }
+
+    if(e.target.classList.contains('decimal')){
+      if(operationCompleted || operator !== ''){
+        if((!secondNumber.includes('.')) && (secondNumber !== '')){
+          secondNumber += '.';
+          updateDisplay(secondNumber);
+        }
+      } else {
+          if((!firstNumber.includes('.')) && (firstNumber !== '')){
+            firstNumber += '.';
+            updateDisplay(firstNumber);
+          }
+      }
     }
   }
 })
