@@ -26,10 +26,11 @@
   justify-content: flex-end;
   border: 1px solid black;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
   margin: 8px 5px;
   font-family: 'Orbitron', sans-serif;
   font-size: xx-large;
+  height: 50px;
 }
 
 .buttons {
