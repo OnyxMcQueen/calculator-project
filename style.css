@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  background-color: rgb(243, 241, 241);
+}
+
 #calc-container {
   display: flex;
   flex-direction: column;
@@ -13,8 +17,8 @@
 }
 
 .calculator {
-  background-color: rgb(226, 223, 223);
-  border: 2px solid black;
+  background-color: rgb(220, 217, 217);
+  border: 3px solid black;
   border-radius: 10px;
   height: 510px;
   width: 310px;
@@ -67,6 +71,14 @@
   font-family: 'Orbitron', sans-serif;
   font-size: medium;
   color: red;
+}
+
+#title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .btn:hover {
