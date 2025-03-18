@@ -170,5 +170,22 @@ calculator.addEventListener('click', (e) => {
           }
       }
     }
+
+    if(e.target.classList.contains('delete')){
+      if(!operationCompleted){
+        if(operator === '' && firstNumber !== ''){
+          firstNumber = firstNumber.slice(0, -1); // Remove last character of firstNumber
+          updateDisplay(firstNumber);
+        } else if (secondNumber !== ''){
+          secondNumber = secondNumber.slice(0, -1); // Remove last character of secondNumber
+          updateDisplay(secondNumber);
+        }
+      } else {
+        if(secondNumber !== ''){
+          secondNumber = secondNumber.slice(0, -1); // Remove last character of secondNumber
+          updateDisplay(secondNumber);
+        }
+      }
+    }
   }
 })
